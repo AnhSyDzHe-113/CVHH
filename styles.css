@@ -41,10 +41,32 @@ a:hover {
 }
 
 .resume-header {
+  position: relative;
   grid-area: header;
   min-height: 182px;
   background: var(--navy);
   color: #fff;
+}
+
+.language-switch {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.language-switch a {
+  color: #fff;
+  opacity: 0.75;
+}
+
+.language-switch a[aria-current="page"] {
+  font-weight: 700;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .header-copy {
@@ -313,9 +335,15 @@ a:hover {
     min-height: 140px;
   }
 
+  .language-switch {
+    top: 10px;
+    right: 14px;
+    left: auto;
+  }
+
   .header-copy {
     margin-left: 0;
-    padding: 18px 14px;
+    padding: 40px 14px 18px;
   }
 
   .header-copy h1 {
@@ -431,6 +459,10 @@ a:hover {
     font-size: 10.5pt;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  .language-switch {
+    display: none;
   }
 
   .resume {
